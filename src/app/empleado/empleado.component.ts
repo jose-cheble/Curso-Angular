@@ -11,7 +11,7 @@ export class EmpleadoComponent implements OnInit {
   nombre = "Juan";
   apellido = "Perez";
   edad = 18;
-  // empresa = "Cuos";
+  empresa = "";
   cuadroHabilitado=false;
   
 
@@ -20,4 +20,13 @@ export class EmpleadoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  mostrarEmpresa(empresa: any, event: Event) {
+    if ((<HTMLInputElement>event.target).value == "habilitado") {
+      this.empresa = empresa
+      alert(this.empresa)
+    }
+
+  }
+
+  
 }
